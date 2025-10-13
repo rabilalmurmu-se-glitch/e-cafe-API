@@ -1,0 +1,134 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+generator erd {
+  provider = "prisma-erd-generator"
+  output   = "./ERD.png" // can be .svg, .png, .md, etc.
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Shop {
+  id           Int    @id @unique @default(autoincrement())
+  name         String @unique
+  address      String @db.Text
+  email        String
+  phone        String
+  owner        String
+  banner       String
+  logo         String
+  about_shop   String @db.Text
+  shop_mission String @db.Text
+  social       Json   @db.Json
+
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime     @updatedAt
+  Categories Categories[]
+  Items      Items[]
+}
+
+enum Genders {
+  MALE
+  FEMALE
+}
+
+enum UserTypes {
+  CUSTOMER
+  OWNER
+  MAMBER
+}
+
+model Users {
+  id        Int         @id @unique @default(autoincrement())
+  name      String
+  email     String
+  phone     String?
+  password  String
+  address   String      @db.Text
+  gender    Genders
+  type      UserTypes   @default(CUSTOMER)
+  OrderList OrderList[]
+  Orders    Orders[]
+}
+
+model Types {
+  id   Int    @id @unique @default(autoincrement())
+  type String
+
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime     @updatedAt
+  Categories Categories[]
+}
+
+model Categories {
+  id      Int    @id @unique @default(autoincrement())
+  name    String
+  type_id Int
+  type    Types  @relation(fields: [type_id], references: [id])
+  shop_id Int
+  shop    Shop   @relation(fields: [shop_id], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  Items     Items[]
+}
+
+model Items {
+  id          Int         @id @unique @default(autoincrement())
+  name        String
+  description String      @db.Text
+  price       Int         @db.Integer
+  category_id Int
+  category    Categories  @relation(fields: [category_id], references: [id])
+  shop_id     Int
+  shop        Shop        @relation(fields: [shop_id], references: [id])
+  ListItems   ListItems[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model OrderList {
+  id      Int   @id @unique @default(autoincrement())
+  user_id Int
+  user    Users @relation(fields: [user_id], references: [id])
+
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  Orders    Orders[]
+  ListItems ListItems[]
+}
+
+model ListItems {
+  id            Int       @id @unique @default(autoincrement())
+  order_list_id Int
+  order_list    OrderList @relation(fields: [order_list_id], references: [id])
+  item_id       Int
+  item          Items     @relation(fields: [item_id], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Orders {
+  id            Int       @id @unique @default(autoincrement())
+  order_id      String    @unique
+  order_list_id Int
+  order_list    OrderList @relation(fields: [order_list_id], references: [id])
+  user_id       Int
+  user          Users     @relation(fields: [user_id], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
