@@ -8,110 +8,118 @@ A RESTful API built with Express 5 and TypeScript, using Prisma as the ORM for a
 - **Framework**: Express 5
 - **Language**: TypeScript 5
 - **ORM**: Prisma (PostgreSQL)
+- **Authentication**: JWT (JSON Web Tokens)
 - **Logging**: Winston + Morgan
-- **Env**: dotenv
+- **Environment Management**: dotenv
 
 ### Prerequisites
 - **Node.js** 18+ (20+ recommended)
 - **npm** (comes with Node)
 - **PostgreSQL** running and reachable
+- **A Google Cloud project** for deployment
 
 ### Getting Started
-1. **Clone and install**
+1. **Clone the repository and install dependencies**
    ```bash
+   git clone <repository-url>
+   cd <repository-name>
    npm install
    ```
-2. **Environment variables**
-   Create a `.env` at the project root. You can start from `.env copy`:
+2. **Set up environment variables**
+   Create a `.env` file in the project root. You can start by copying the example file if one is provided:
    ```bash
-   cp ".env copy" .env
+   cp .env.example .env
    ```
-   Update values as needed (see Environment section below).
-3. **Generate Prisma client and ERD**
+   Update the values in `.env` as needed (see the Environment section below).
+3. **Generate the Prisma client and ERD**
    ```bash
    npx prisma generate
    ```
 4. **Apply database migrations**
    ```bash
    npx prisma migrate dev
-   # or to reset/apply from scratch
-   # npx prisma migrate reset
    ```
-5. **Run in development**
+   To reset and apply migrations from scratch, you can use:
+   ```bash
+   npx prisma migrate reset
+   ```
+5. **Run the application in development mode**
    ```bash
    npm run dev
    ```
-6. **Build & start (production)**
+   The application will be available at `http://localhost:<PORT>`.
+6. **Build and start for production**
    ```bash
    npm run build
    npm start
    ```
 
 ### Scripts
-- **dev**: `ts-node-dev` runs `src/main.ts` with fast reload
-- **build**: TypeScript compile to `dist`
-- **start**: run compiled app from `dist/main.js`
+- `dev`: Runs the application using `ts-node-dev` for fast development with auto-reloading.
+- `build`: Compiles the TypeScript code to JavaScript in the `dist` directory.
+- `start`: Starts the production server from the compiled code in `dist/main.js`.
 
-### Environment
-The app requires these variables (validated on startup):
+### Environment Variables
+The application requires the following environment variables to be set:
 
-- **PORT**: Port for the HTTP server (e.g., `5000`)
-- **ENV**: Environment name (e.g., `Development`, `Production`)
-- **DATABASE_URL**: PostgreSQL connection string, e.g.
+- `PORT`: The port for the HTTP server (e.g., `5000`).
+- `ENV`: The application environment (e.g., `Development`, `Production`).
+- `DATABASE_URL`: The connection string for your PostgreSQL database.
   ```
   postgresql://USER:PASSWORD@HOST:5432/DB_NAME?schema=public
   ```
+- `JWT_SECRET`: A secret key for signing JWTs.
 
-Example `.env` (do not commit):
+Example `.env` file:
 ```env
 DATABASE_URL="postgresql://postgres:password@localhost:5432/e_cafe_db?schema=public"
 PORT=5000
 ENV=Development
+JWT_SECRET="your-super-secret-jwt-key"
 ```
 
-### Running
-- Root health endpoint:
-  ```
-  GET /
-  -> { "message": "Server is running on port: <PORT>" }
-  ```
-- API base path: `http://localhost:<PORT>/api/v1`
-
 ### API Routes
+The API base path is `/api/v1`.
+
+#### Authentication
+- `POST /api/v1/users/register`: Register a new user.
+- `POST /api/v1/users/login`: Log in a user and receive a JWT.
+
+#### Resources
 Each resource exposes standard CRUD endpoints under the base path.
 
 - **/shops**
-  - GET `/` — list
-  - GET `/:id` — detail
-  - POST `/` — create
-  - PUT `/:id` — update
-  - DELETE `/:id` — remove
+  - `GET /` — List all shops
+  - `GET /:id` — Get a single shop by ID
+  - `POST /` — Create a new shop
+  - `PUT /:id` — Update a shop
+  - `DELETE /:id` — Delete a shop
 - **/users**
-  - GET `/`, GET `/:id`, POST `/`, PUT `/:id`, DELETE `/:id`
+  - `GET /`, `GET /:id`, `POST /`, `PUT /:id`, `DELETE /:id`
 - **/types**
-  - GET `/`, GET `/:id`, POST `/`, PUT `/:id`, DELETE `/:id`
+  - `GET /`, `GET /:id`, `POST /`, `PUT /:id`, `DELETE /:id`
 - **/categories**
-  - GET `/`, GET `/:id`, POST `/`, PUT `/:id`, DELETE `/:id`
+  - `GET /`, `GET /:id`, `POST /`, `PUT /:id`, `DELETE /:id`
 - **/items**
-  - GET `/`, GET `/:id`, POST `/`, PUT `/:id`, DELETE `/:id`
+  - `GET /`, `GET /:id`, `POST /`, `PUT /:id`, `DELETE /:id`
 - **/order-lists**
-  - GET `/`, GET `/:id`, POST `/`, PUT `/:id`, DELETE `/:id`
+  - `GET /`, `GET /:id`, `POST /`, `PUT /:id`, `DELETE /:id`
 - **/list-items**
-  - GET `/`, GET `/:id`, POST `/`, PUT `/:id`, DELETE `/:id`
+  - `GET /`, `GET /:id`, `POST /`, `PUT /:id`, `DELETE /:id`
 - **/orders**
-  - GET `/`, GET `/:id`, POST `/`, PUT `/:id`, DELETE `/:id`
+  - `GET /`, `GET /:id`, `POST /`, `PUT /:id`, `DELETE /:id`
 
-Quick example:
+Example using `curl`:
 ```bash
 curl http://localhost:5000/api/v1/shops
 ```
 
-### Data Model & Prisma
-- Prisma schema: `prisma/schema.prisma`
-- Generated client output: `src/generated/prisma`
-- ERD image (generated by prisma-erd-generator): `prisma/ERD.png`
+### Data Model and Prisma
+- The Prisma schema is defined in `prisma/schema.prisma`.
+- The generated Prisma client is located in `src/generated/prisma`.
+- An Entity Relationship Diagram (ERD) is available at `prisma/ERD.png`.
 
-Common commands:
+Common Prisma commands:
 ```bash
 # After editing schema.prisma
 npx prisma generate
@@ -119,15 +127,51 @@ npx prisma generate
 # Create a new migration
 npx prisma migrate dev --name <change_name>
 
-# Apply migrations to an existing DB without prompts
+# Apply migrations to an existing database without prompts
 npx prisma migrate deploy
 ```
 
 ### Logging
-- Console logs and files under `logs/`:
-  - `logs/combined.log`
-  - `logs/error.log`
-- HTTP request logs via Morgan are routed into Winston at the `http` level.
+- Logs are output to the console and stored in files under the `logs/` directory:
+  - `logs/combined.log`: All logs.
+  - `logs/error.log`: Only error logs.
+- HTTP request logs from Morgan are routed into Winston at the `http` level.
+
+### Deployment with Google Cloud Run
+This application can be easily deployed as a container to Google Cloud Run.
+
+1.  **Enable Google Cloud APIs**: Make sure you have the Cloud Run and Cloud Build APIs enabled in your Google Cloud project.
+2.  **Containerize the application**: Create a `Dockerfile` in the root of your project:
+
+    ```Dockerfile
+    # Use the official Node.js 20 image.
+    FROM node:20-slim
+
+    # Create and change to the app directory.
+    WORKDIR /usr/src/app
+
+    # Copy application dependency manifests to the container image.
+    COPY package*.json ./
+
+    # Install production dependencies.
+    RUN npm install --only=production
+
+    # Copy local code to the container image.
+    COPY . .
+
+    # Build the TypeScript code.
+    RUN npm run build
+
+    # Run the web service on container startup.
+    CMD [ "npm", "start" ]
+    ```
+3. **Build and deploy**: Use Google Cloud Build to build the container and deploy it to Cloud Run.
+
+   ```bash
+   gcloud run deploy <service-name> --source . --region <your-region>
+   ```
+
+   Replace `<service-name>` with a name for your service (e.g., `my-api-service`) and `<your-region>` with your preferred Google Cloud region (e.g., `us-central1`). You will also be prompted to set environment variables during the deployment process.
 
 ### Project Structure
 ```
