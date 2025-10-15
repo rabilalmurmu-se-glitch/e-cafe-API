@@ -2,8 +2,13 @@
 import { Request, Response } from "express";
 import { BaseController } from "./base.controller";
 import { categoryService } from "../services/category.service";
+import { CreateCategoryDto, UpdateCategoryDto } from "../dtos/category.dto";
 
-class CategoryController extends BaseController<typeof categoryService> {
+class CategoryController extends BaseController<
+  typeof categoryService,
+  CreateCategoryDto,
+  UpdateCategoryDto
+> {
   constructor() {
     super(categoryService);
   }

@@ -1,0 +1,387 @@
+{
+  "info": {
+    "_postman_id": "a8c2b694-8a81-4222-8bd635b4b83f",
+    "name": "Full API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5000" },
+    { "key": "userId", "value": "1" },
+    { "key": "shopId", "value": "1" },
+    { "key": "typeId", "value": "1" },
+    { "key": "categoryId", "value": "1" },
+    { "key": "itemId", "value": "1" },
+    { "key": "orderListId", "value": "1" },
+    { "key": "listItemId", "value": "1" },
+    { "key": "orderId", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "List Users",
+          "request": { "method": "GET", "url": "{{baseUrl}}/api/v1/users" }
+        },
+        {
+          "name": "Get User by ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/users/{{userId}}"
+          }
+        },
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"password123\",\n  \"phone\": \"1234567890\",\n  \"address\": \"123 Main St\",\n  \"gender\": \"MALE\",\n  \"type\": \"CUSTOMER\"\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/users"
+          }
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Updated\",\n  \"email\": \"john.updated@example.com\",\n  \"phone\": \"9876543210\"\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/users/{{userId}}"
+          }
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/v1/users/{{userId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Shops",
+      "item": [
+        {
+          "name": "List Shops",
+          "request": { "method": "GET", "url": "{{baseUrl}}/api/v1/shops" }
+        },
+        {
+          "name": "Get Shop by ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/shops/{{shopId}}"
+          }
+        },
+        {
+          "name": "Create Shop",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"My Awesome Shop\",\n  \"address\": \"123 Market St\",\n  \"email\": \"shop@example.com\",\n  \"phone\": \"1234567890\",\n  \"owner\": \"Alice\",\n  \"banner\": \"banner.png\",\n  \"logo\": \"logo.png\",\n  \"about_shop\": \"We sell the best products\",\n  \"shop_mission\": \"To serve quality\",\n  \"social\": {\"facebook\": \"fb.com/shop\"}\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/shops"
+          }
+        },
+        {
+          "name": "Update Shop",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Shop Name\",\n  \"address\": \"456 Market St\"\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/shops/{{shopId}}"
+          }
+        },
+        {
+          "name": "Delete Shop",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/v1/shops/{{shopId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Types",
+      "item": [
+        {
+          "name": "List Types",
+          "request": { "method": "GET", "url": "{{baseUrl}}/api/v1/types" }
+        },
+        {
+          "name": "Get Type by ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/types/{{typeId}}"
+          }
+        },
+        {
+          "name": "Create Type",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"type\": \"New Type\"\n}" },
+            "url": "{{baseUrl}}/api/v1/types"
+          }
+        },
+        {
+          "name": "Update Type",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"Updated Type\"\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/types/{{typeId}}"
+          }
+        },
+        {
+          "name": "Delete Type",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/v1/types/{{typeId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "List Categories",
+          "request": { "method": "GET", "url": "{{baseUrl}}/api/v1/categories" }
+        },
+        {
+          "name": "Get Category by ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/categories/{{categoryId}}"
+          }
+        },
+        {
+          "name": "Create Category",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"New Category\",\n  \"shop_id\": {{shopId}},\n  \"type_id\": {{typeId}}\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/categories"
+          }
+        },
+        {
+          "name": "Update Category",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Category\"\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/categories/{{categoryId}}"
+          }
+        },
+        {
+          "name": "Delete Category",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/v1/categories/{{categoryId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Items",
+      "item": [
+        {
+          "name": "List Items",
+          "request": { "method": "GET", "url": "{{baseUrl}}/api/v1/items" }
+        },
+        {
+          "name": "Get Item by ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/items/{{itemId}}"
+          }
+        },
+        {
+          "name": "Create Item",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"New Item\",\n  \"description\": \"Item description\",\n  \"price\": 100,\n  \"category_id\": {{categoryId}},\n  \"shop_id\": {{shopId}}\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/items"
+          }
+        },
+        {
+          "name": "Update Item",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Item\",\n  \"price\": 150\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/items/{{itemId}}"
+          }
+        },
+        {
+          "name": "Delete Item",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/v1/items/{{itemId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "OrderLists",
+      "item": [
+        {
+          "name": "List OrderLists",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/order-lists"
+          }
+        },
+        {
+          "name": "Get OrderList by ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/order-lists/{{orderListId}}"
+          }
+        },
+        {
+          "name": "Create OrderList",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"user_id\": {{userId}}\n}" },
+            "url": "{{baseUrl}}/api/v1/order-lists"
+          }
+        },
+        {
+          "name": "Update OrderList",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"user_id\": {{userId}}\n}" },
+            "url": "{{baseUrl}}/api/v1/order-lists/{{orderListId}}"
+          }
+        },
+        {
+          "name": "Delete OrderList",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/v1/order-lists/{{orderListId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ListItems",
+      "item": [
+        {
+          "name": "List ListItems",
+          "request": { "method": "GET", "url": "{{baseUrl}}/api/v1/list-items" }
+        },
+        {
+          "name": "Get ListItem by ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/list-items/{{listItemId}}"
+          }
+        },
+        {
+          "name": "Create ListItem",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"order_list_id\": {{orderListId}},\n  \"item_id\": {{itemId}},\n  \"quantity\": 2\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/list-items"
+          }
+        },
+        {
+          "name": "Update ListItem",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"quantity\": 3\n}" },
+            "url": "{{baseUrl}}/api/v1/list-items/{{listItemId}}"
+          }
+        },
+        {
+          "name": "Delete ListItem",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/v1/list-items/{{listItemId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "List Orders",
+          "request": { "method": "GET", "url": "{{baseUrl}}/api/v1/orders" }
+        },
+        {
+          "name": "Get Order by ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/orders/{{orderId}}"
+          }
+        },
+        {
+          "name": "Create Order",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_id\": {{userId}},\n  \"order_list_id\": {{orderListId}},\n  \"total_price\": 500,\n  \"status\": \"PENDING\"\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/orders"
+          }
+        },
+        {
+          "name": "Update Order",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"CONFIRMED\"\n}"
+            },
+            "url": "{{baseUrl}}/api/v1/orders/{{orderId}}"
+          }
+        },
+        {
+          "name": "Delete Order",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/v1/orders/{{orderId}}"
+          }
+        }
+      ]
+    }
+  ]
+}

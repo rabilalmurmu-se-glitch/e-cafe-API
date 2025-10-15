@@ -1,62 +1,98 @@
-// src/controllers/base.controller.ts
-import { Request, Response } from "express";
+import { Request, Response, NextFunction } from "express";
 import { BaseService } from "../services/base.service";
 import logger from "../utils/logger";
+import { ResponsePayload } from "../utils/response";
+import { AppError } from "../utils/appError";
+import { Prisma } from "../generated/prisma";
 
-export class BaseController<T extends BaseService<any>> {
+export class BaseController<T extends BaseService<any>, CType, UType> {
   constructor(protected service: T) {}
 
-  async getAll(req: Request, res: Response) {
+  protected modelName = this.service.model;
+
+  // Get all records
+  getAll = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const data = await this.service.findAll();
-      res.status(200).json(data);
+      const response = this.successResponse(
+        data,
+        `Fetched ${this.modelName} data successfully`
+      );
+      res.status(200).json(response);
     } catch (error) {
       logger.error(error);
-      res.status(500).json({ message: "Failed to fetch records" });
+      next(error);
     }
-  }
+  };
 
-  async getById(req: Request, res: Response) {
+  // Get by ID
+  getById = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const id = Number(req.params.id);
       const data = await this.service.findById(id);
-      if (!data) return res.status(404).json({ message: "Record not found" });
-      res.status(200).json(data);
+
+      if (!data) {
+        return next(new AppError(`${this.modelName} not found`, 404));
+      }
+
+      const response = this.successResponse(data, "Record fetched");
+      res.status(200).json(response);
     } catch (error) {
       logger.error(error);
-      res.status(500).json({ message: "Failed to fetch record" });
+      next(error);
     }
-  }
+  };
 
-  async create(req: Request, res: Response) {
+  // Create record
+  create = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const data = await this.service.create(req.body);
-      res.status(201).json(data);
+      const data = await this.service.create<CType>(req.body);
+      const response = this.successResponse(data, "Record created");
+      res.status(201).json(response);
     } catch (error) {
+      console.log(typeof error);
       logger.error(error);
-      res.status(400).json({ message: "Failed to create record" });
+      next(error);
     }
-  }
+  };
 
-  async update(req: Request, res: Response) {
+  // Update record
+  update = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const id = Number(req.params.id);
-      const data = await this.service.update(id, req.body);
-      res.status(200).json(data);
+      const data = await this.service.update<UType>(id, req.body);
+      const response = this.successResponse(data, "Record updated");
+      res.status(200).json(response);
     } catch (error) {
       logger.error(error);
-      res.status(400).json({ message: "Failed to update record" });
+      next(error);
     }
-  }
+  };
 
-  async remove(req: Request, res: Response) {
+  // Delete record
+  remove = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const id = Number(req.params.id);
       await this.service.delete(id);
-      res.status(204).end();
+      const response = this.successResponse(
+        null,
+        "Record deleted successfully"
+      );
+      res.status(200).json(response);
     } catch (error) {
       logger.error(error);
-      res.status(400).json({ message: "Failed to delete record" });
+      next(error);
     }
-  }
+  };
+
+  // Success response helper
+  protected successResponse = <T>(data: T, message: string) => {
+    return ResponsePayload({
+      success: true,
+      error: false,
+      data,
+      message,
+      details: null,
+    });
+  };
 }

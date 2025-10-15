@@ -1,5 +1,5 @@
 export interface ResponseProps {
-  succes: boolean;
+  success: boolean;
   error: boolean;
   data: any;
   message: string;
@@ -9,7 +9,7 @@ export const ResponsePayload: (props: ResponseProps) => ResponseProps = (
   props: ResponseProps
 ) => {
   const resp: ResponseProps = {
-    succes: props.succes,
+    success: props.success,
     error: props.error,
     data: props.data,
     message: props.message,

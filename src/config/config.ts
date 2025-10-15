@@ -5,18 +5,37 @@ interface AppConfig {
   port: number;
   env: string;
 }
-
+interface JwtConfig {
+  access: { secret: string; expireIn: any };
+  refresh: { secret: string; expireIn: any };
+}
+interface NgrokConfig {
+  authtoken: string;
+}
 interface Config {
   app: AppConfig;
+  jwt: JwtConfig;
+  ngrok: NgrokConfig;
 }
-const requiredEnvVariables: string[] = ["PORT", "ENV"];
+const requiredEnvVariables: string[] = ["PORT", "APP_ENV"];
 
-const getEnvVal: (key: string) => string = (key: string): string => {
-  return process.env[key] as string;
-};
+function getEnvVal<T>(key: string): T {
+  return process.env[key] as T;
+}
 
 export const config: Config = {
-  app: { port: +getEnvVal("PORT"), env: getEnvVal("ENV") },
+  app: { port: +getEnvVal<number>("PORT"), env: getEnvVal("APP_ENV") },
+  jwt: {
+    access: {
+      secret: getEnvVal("JWT_ACCESSTOKET_SECRET"),
+      expireIn: getEnvVal("JWT_ACCESSTOKET_SECRET_EXPIRES_IN"),
+    },
+    refresh: {
+      secret: getEnvVal("JWT_REFRESHTOKEN_SECRET"),
+      expireIn: getEnvVal("JWT_REFRESHTOKEN_SECRET_EXPIRES_IN"),
+    },
+  },
+  ngrok: { authtoken: getEnvVal("NGROK_AUTHTOKEN") },
 };
 
 export const validateEnvVariables: () => void = () => {
