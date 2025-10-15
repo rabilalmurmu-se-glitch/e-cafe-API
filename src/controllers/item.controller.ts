@@ -2,8 +2,9 @@
 import { Request, Response } from "express";
 import { BaseController } from "./base.controller";
 import { itemService } from "../services/items.service";
+import { CreateItemDto, UpdateItemDto } from "../dtos/item.dto";
 
-class ItemController extends BaseController<typeof itemService> {
+class ItemController extends BaseController<typeof itemService,CreateItemDto,UpdateItemDto> {
   constructor() {
     super(itemService);
   }

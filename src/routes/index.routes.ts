@@ -1,6 +1,4 @@
-// src/routes/index.ts
 import { Router } from "express";
-
 import shopRoutes from "./shop.routes";
 import userRoutes from "./user.routes";
 import typeRoutes from "./types.routes";

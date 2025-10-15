@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@ngrok/ngrok": "^1.5.2",
     "@prisma/client": "^6.17.1",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
@@ -19,7 +20,8 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.1",
-    "winston": "^3.18.3"
+    "winston": "^3.18.3",
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "@mermaid-js/mermaid-cli": "^11.12.0",
