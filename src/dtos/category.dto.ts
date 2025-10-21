@@ -4,6 +4,7 @@ export const createCategorySchema = z.object({
   name: z.string().min(2),
   type_id: z.number().int().positive(),
   shop_id: z.number().int().positive(),
+  photo:z.string().optional()
 });
 
 export const updateCategorySchema = createCategorySchema.partial();

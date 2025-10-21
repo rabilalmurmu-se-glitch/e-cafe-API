@@ -1,11 +1,11 @@
 // src/routes/listItem.routes.ts
 import { Router } from "express";
-import { listItemController } from "../controllers/itemList.controller";
-import { validate } from "../middlewares/validateRequest";
+import { listItemController } from "@/controllers/itemList.controller";
+import { validate } from "@/middlewares/validateRequest";
 import {
   createListItemSchema,
   updateListItemSchema,
-} from "../dtos/listItem.dto";
+} from "@/dtos/listItem.dto";
 
 const router = Router();
 

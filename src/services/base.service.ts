@@ -1,7 +1,6 @@
-// src/services/base.service.ts
-import { PrismaClient, Prisma } from "../generated/prisma/client";
-import { AppError } from "../utils/appError"; // Your custom error class
-import logger from "../utils/logger"; // Optional but recommended
+import { PrismaClient, Prisma } from "@/generated/prisma/client";
+import { AppError } from "@/utils/appError"; // Your custom error class
+import logger from "@/utils/logger"; // Optional but recommended
 
 const prisma = new PrismaClient();
 

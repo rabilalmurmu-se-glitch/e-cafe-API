@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { categoryController } from "../controllers/cagetory.controller";
-import { validate } from "../middlewares/validateRequest";
+import { categoryController } from "@/controllers/cagetory.controller";
+import { validate } from "@/middlewares/validateRequest";
 import {
   createCategorySchema,
   updateCategorySchema,

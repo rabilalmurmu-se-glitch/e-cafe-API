@@ -12,10 +12,17 @@ interface JwtConfig {
 interface NgrokConfig {
   authtoken: string;
 }
+interface R2BucketConfig {
+  bucketName: string;
+  accountId: string;
+  accessKeyId: string;
+  secretAccessKey: string;
+}
 interface Config {
   app: AppConfig;
   jwt: JwtConfig;
   ngrok: NgrokConfig;
+  r2: R2BucketConfig;
 }
 const requiredEnvVariables: string[] = ["PORT", "APP_ENV"];
 
@@ -36,6 +43,12 @@ export const config: Config = {
     },
   },
   ngrok: { authtoken: getEnvVal("NGROK_AUTHTOKEN") },
+  r2: {
+    bucketName: getEnvVal("BUCKET_NAME"),
+    accessKeyId: getEnvVal("ACCESS_KEY_ID"),
+    accountId: getEnvVal("ACCOUNT_ID"),
+    secretAccessKey: getEnvVal("SECRET_ACCESS_KEY"),
+  },
 };
 
 export const validateEnvVariables: () => void = () => {

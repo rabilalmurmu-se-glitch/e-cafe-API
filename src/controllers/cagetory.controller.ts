@@ -1,8 +1,8 @@
 // src/controllers/category.controller.ts
 import { Request, Response } from "express";
 import { BaseController } from "./base.controller";
-import { categoryService } from "../services/category.service";
-import { CreateCategoryDto, UpdateCategoryDto } from "../dtos/category.dto";
+import { categoryService } from "@/services/category.service";
+import { CreateCategoryDto, UpdateCategoryDto } from "@/dtos/category.dto";
 
 class CategoryController extends BaseController<
   typeof categoryService,

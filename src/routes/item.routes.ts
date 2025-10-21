@@ -1,8 +1,8 @@
 // src/routes/item.routes.ts
 import { Router } from "express";
-import { itemController } from "../controllers/item.controller";
-import { validate } from "../middlewares/validateRequest";
-import { createItemSchema, updateItemSchema } from "../dtos/item.dto";
+import { itemController } from "@/controllers/item.controller";
+import { validate } from "@/middlewares/validateRequest";
+import { createItemSchema, updateItemSchema } from "@/dtos/item.dto";
 
 const router = Router();
 

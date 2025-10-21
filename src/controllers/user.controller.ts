@@ -1,14 +1,14 @@
 // src/controllers/user.controller.ts
 import { NextFunction, Request, Response } from "express";
 import { BaseController } from "./base.controller";
-import { userService } from "../services/user.service";
-import logger from "../utils/logger";
-import { CreateUserDto, UpdateUserDto } from "../dtos/user.dto";
+import { userService } from "@/services/user.service";
+import logger from "@/utils/logger";
+import { CreateUserDto, UpdateUserDto } from "@/dtos/user.dto";
 import {
   createAccessToken,
   createRefreshToken,
   verifyRefreshToken,
-} from "../utils/jwt";
+} from "@/utils/jwt";
 
 class UserController extends BaseController<
   typeof userService,
@@ -24,7 +24,7 @@ class UserController extends BaseController<
       const { email, password } = req.body;
       const user = await this.service.login({ email, password });
       const { name, phone, type, address, gender } = user;
-      const tokenPayload = { userName: user?.name, type: user?.type };
+      const tokenPayload = { userName: user?.name, role: user?.type };
       const accessToken = createAccessToken<typeof tokenPayload>(tokenPayload);
       const refreshToken =
         createRefreshToken<typeof tokenPayload>(tokenPayload);
@@ -32,7 +32,7 @@ class UserController extends BaseController<
         {
           name,
           phone,
-          type,
+          role: type,
           address,
           gender,
           email: user?.email,

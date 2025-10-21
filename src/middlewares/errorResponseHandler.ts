@@ -1,9 +1,9 @@
 import { Request, Response, NextFunction } from "express";
 import { ZodError } from "zod";
-import logger from "../utils/logger";
-import { createErrorResponse } from "../utils/apiError";
-import { Prisma } from "../generated/prisma/index";
-import { AppError } from "../utils/appError";
+import logger from "@/utils/logger";
+import { createErrorResponse } from "@/utils/apiError";
+import { Prisma } from "@/generated/prisma/index";
+import { AppError } from "@/utils/appError";
 
 export const errorHandler = (
   err: unknown,
@@ -14,7 +14,7 @@ export const errorHandler = (
   logger.error(err);
 
   if (err instanceof ZodError) {
-    const details = err.errors.map((e) => ({
+    const details = err.issues.map((e) => ({
       path: e.path,
       message: e.message,
     }));

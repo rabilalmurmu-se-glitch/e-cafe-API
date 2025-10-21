@@ -1,5 +1,5 @@
 import jwt, { JwtPayload, SignOptions } from "jsonwebtoken";
-import { config } from "../config/config";
+import { config } from "@/config/config";
 import { AppError } from "./appError";
 
 export const createAccessToken = <T extends object>(payload: T): string => {

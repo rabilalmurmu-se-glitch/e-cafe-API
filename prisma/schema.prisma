@@ -55,8 +55,10 @@ model Users {
   email     String
   phone     String?
   password  String
-  address   String      @db.Text
+  address   String?     @db.Text
   gender    Genders
+  photo     String?
+  about     String?     @db.Text
   type      UserTypes   @default(CUSTOMER)
   OrderList OrderList[]
   Orders    Orders[]
@@ -72,12 +74,13 @@ model Types {
 }
 
 model Categories {
-  id      Int    @id @unique @default(autoincrement())
+  id      Int     @id @unique @default(autoincrement())
   name    String
+  photo   String?
   type_id Int
-  type    Types  @relation(fields: [type_id], references: [id])
+  type    Types   @relation(fields: [type_id], references: [id])
   shop_id Int
-  shop    Shop   @relation(fields: [shop_id], references: [id])
+  shop    Shop    @relation(fields: [shop_id], references: [id])
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -89,6 +92,7 @@ model Items {
   name        String
   description String      @db.Text
   price       Int         @db.Integer
+  photo       String?
   category_id Int
   category    Categories  @relation(fields: [category_id], references: [id])
   shop_id     Int
@@ -116,7 +120,7 @@ model ListItems {
   order_list    OrderList @relation(fields: [order_list_id], references: [id])
   item_id       Int
   item          Items     @relation(fields: [item_id], references: [id])
-  quantity Int @default(1)
+  quantity      Int       @default(1)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -129,8 +133,8 @@ model Orders {
   order_list    OrderList @relation(fields: [order_list_id], references: [id])
   user_id       Int
   user          Users     @relation(fields: [user_id], references: [id])
-  status String
-  total_price Int
+  status        String
+  total_price   Int
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

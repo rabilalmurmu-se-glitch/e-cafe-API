@@ -1,20 +1,29 @@
 import type { Express, Request, Response } from "express";
 import express from "express";
-import requestLogger from "./middlewares/requestLogger";
-import logger from "./utils/logger";
-import { config, validateEnvVariables } from "./config/config";
-import routes from "./routes/index.routes";
-import { errorHandler } from "./middlewares/errorResponseHandler";
+import requestLogger from "@/middlewares/requestLogger";
+import logger from "@/utils/logger";
+import { config, validateEnvVariables } from "@/config/config";
+import routes from "@/routes/index.routes";
+import { errorHandler } from "@/middlewares/errorResponseHandler";
 import ngrok from "@ngrok/ngrok";
+import "module-alias/register";
+import path from "path";
+import cors from "cors";
 
 const app: Express = express();
 
-app.use(requestLogger);
-
+app.use(
+  cors({
+    exposedHeaders: ["access-token", "x-access-token"],
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
+
 validateEnvVariables();
+app.use(requestLogger);
 app.get("/", (req: Request, res: Response) => {
   logger.info("Root endpoint hit");
   res.status(200).json({

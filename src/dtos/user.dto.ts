@@ -2,10 +2,12 @@ import { z } from "zod";
 
 export const createUserSchema = z.object({
   name: z.string().min(2),
-  email: z.string().email(),
+  email: z.email(),
   phone: z.string().optional(),
   password: z.string().min(6),
-  address: z.string(),
+  address: z.string().optional(),
+  photo: z.string().optional(),
+  about: z.string().optional(),
   gender: z.enum(["MALE", "FEMALE"]),
   type: z.enum(["CUSTOMER", "OWNER", "MAMBER"]).default("CUSTOMER"),
 });
@@ -13,7 +15,7 @@ export const createUserSchema = z.object({
 export const updateUserSchema = createUserSchema.partial();
 
 export const loginUserSchema = z.object({
-  email: z.string().email(),
+  email: z.email(),
   password: z.string().min(6),
 });
 

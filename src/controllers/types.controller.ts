@@ -1,6 +1,6 @@
 // src/controllers/type.controller.ts
-import { CreateTypeDto, UpdateTypeDto } from "../dtos/types.dto";
-import { typesService } from "../services/types.service";
+import { CreateTypeDto, UpdateTypeDto } from "@/dtos/types.dto";
+import { typesService } from "@/services/types.service";
 import { BaseController } from "./base.controller";
 
 class TypeController extends BaseController<
