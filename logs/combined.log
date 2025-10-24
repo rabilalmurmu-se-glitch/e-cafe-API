@@ -1244,3 +1244,213 @@ Please make sure your database server is running at `localhost:5432`.
 [2025-10-20T14:20:12.229Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
 [2025-10-20T14:20:13.409Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
 [2025-10-21T01:46:47.167Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T01:50:14.232Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T01:50:16.568Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T02:23:03.584Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T02:23:04.909Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T02:34:36.382Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T02:34:37.449Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T02:51:26.780Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T02:51:28.977Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T03:03:51.922Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T03:03:53.427Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T03:03:56.561Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T03:03:57.613Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T03:33:19.720Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T03:33:20.965Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T03:33:30.380Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T03:33:31.411Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T03:33:36.349Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T03:33:37.452Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T03:33:41.823Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T03:33:42.860Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T03:35:20.358Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T03:35:21.850Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T04:41:25.517Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T04:41:26.169Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T04:41:28.971Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T04:41:38.536Z] [32minfo[39m: Root endpoint hit
+[2025-10-21T04:46:24.218Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T04:46:25.627Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T04:46:46.280Z] [32minfo[39m: Root endpoint hit
+[2025-10-21T04:59:22.830Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T04:59:23.978Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T05:01:03.772Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T05:01:05.151Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T09:29:56.545Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T09:30:27.438Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T09:32:43.975Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T09:32:52.588Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T09:33:29.754Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T09:33:29.767Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T09:34:39.313Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T09:34:48.895Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T09:34:49.822Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-21T11:13:25.714Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T11:13:31.039Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-21T11:26:59.473Z] [32minfo[39m: 🚀 Server running on port:500 and mod: prod
+[2025-10-21T11:48:52.639Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:48:52.650Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:50:37.617Z] [32minfo[39m: 🚀 Server running on port:500 and mod: prod
+[2025-10-21T11:50:41.613Z] [32minfo[39m: 🚀 Server running on port:500 and mod: prod
+[2025-10-21T11:50:46.568Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:50:46.577Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:51:18.018Z] [32minfo[39m: 🚀 Server running on port:500 and mod: prod
+[2025-10-21T11:51:35.473Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:51:35.486Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:52:21.390Z] [32minfo[39m: 🚀 Server running on port:500 and mod: prod
+[2025-10-21T11:52:22.341Z] [32minfo[39m: 🚀 Server running on port:500 and mod: prod
+[2025-10-21T11:53:24.573Z] [32minfo[39m: 🚀 Server running on port:500 and mod: prod
+[2025-10-21T11:54:10.683Z] [32minfo[39m: 🚀 Server running on port:500 and mod: prod
+[2025-10-21T11:54:16.849Z] [32minfo[39m: 🚀 Server running on port:500 and mod: prod
+[2025-10-21T11:54:22.225Z] [32minfo[39m: 🚀 Server running on port:500 and mod: prod
+[2025-10-22T09:08:34.194Z] [32minfo[39m: 🚀 Server running on port:500 and mod: prod
+[2025-10-24T06:06:26.788Z] [32minfo[39m: 🚀 Server running on port:500 and mod: prod
+[2025-10-24T06:11:02.253Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:11:04.402Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:11:19.610Z] [31merror[39m: Prisma error during create: P2003 - 
+Invalid `this.client?.create()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:87:33
+
+  84 
+  85 async create<T>(data: T) {
+  86   try {
+→ 87     return await this.client?.create(
+Foreign key constraint violated on the constraint: `ListItems_order_list_id_fkey`
+[2025-10-24T06:11:19.613Z] [31merror[39m: Cannot delete or update record due to foreign key constraint.
+[2025-10-24T06:11:19.613Z] [31merror[39m: Cannot delete or update record due to foreign key constraint.
+[2025-10-24T06:12:29.346Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:12:47.107Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:12:50.998Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:12:59.831Z] [31merror[39m: You have to send user id and item id to add item in list
+[2025-10-24T06:13:50.667Z] [31merror[39m: this.client.find is not a function
+[2025-10-24T06:16:01.052Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:16:03.477Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:18:05.085Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:18:06.966Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:18:08.837Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:18:11.263Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:18:22.637Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:18:32.836Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:19:20.721Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:19:22.279Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:20:13.053Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:20:14.811Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:20:18.711Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:20:20.547Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:20:29.693Z] [31merror[39m: Invalid status code: 2001. Status code must be greater than 99 and less than 1000.
+[2025-10-24T06:20:44.911Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:20:46.658Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:23:01.563Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:23:03.680Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:23:16.615Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:23:18.315Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:24:02.923Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:24:04.074Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:24:05.521Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:24:12.308Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:24:13.868Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:31:55.667Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:31:57.278Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:32:06.817Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:32:08.233Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:32:10.050Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:32:11.306Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:32:13.479Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:32:15.301Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:49:23.633Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:49:24.575Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:50:57.002Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:50:58.178Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:51:30.200Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:51:31.245Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:52:36.689Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:52:37.807Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:53:08.750Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:53:09.959Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:53:13.093Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:53:14.364Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:53:17.316Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:53:18.667Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:53:33.510Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:53:34.716Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T06:57:29.384Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T06:57:30.362Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T07:07:37.063Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T07:07:38.222Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T07:29:52.979Z] [31merror[39m: Cannot destructure property 'password' of 'user' as it is null.
+[2025-10-24T07:29:52.979Z] [31merror[39m: Cannot destructure property 'password' of 'user' as it is null.
+[2025-10-24T07:35:06.646Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T07:35:07.911Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T07:35:30.359Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T07:35:31.358Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T07:35:41.718Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T07:35:42.965Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T07:35:43.839Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T07:35:46.142Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T07:35:47.166Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T07:36:16.132Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:36:16.132Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:36:30.765Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:36:30.765Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:37:13.384Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:37:13.384Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:37:32.528Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:37:32.528Z] [31merror[39m: Invalid email or password.
+[2025-10-24T08:01:33.321Z] [31merror[39m: You must provide both userId and itemsId to add an item to the list.
+[2025-10-24T08:11:41.761Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:11:42.853Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:12:03.435Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:12:04.495Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:12:36.542Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:12:37.979Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:13:24.099Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:13:25.180Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:13:39.086Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:13:40.247Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:13:55.211Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:13:56.394Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:14:05.869Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:14:07.170Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:15:21.583Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:15:22.578Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:15:23.664Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:16:29.765Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:16:31.046Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:17:33.343Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:17:34.857Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:17:54.056Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:17:55.526Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:18:01.474Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:18:02.633Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:18:25.864Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:18:27.065Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:19:11.541Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:19:13.045Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:19:16.452Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:19:17.858Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:21:45.258Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:21:46.601Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:21:51.011Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:21:52.176Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:27:14.555Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:27:15.971Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:27:55.236Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:27:56.377Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:28:00.426Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:28:01.479Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:28:02.562Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:28:18.118Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:28:19.562Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:28:23.709Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:28:24.603Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:28:25.809Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:29:16.311Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:29:17.697Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:39:13.067Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:39:14.224Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:39:18.345Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:39:19.435Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev
+[2025-10-24T08:39:24.102Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:39:25.023Z] [32minfo[39m: 🚀 Server running on port:500 and mod: development
+[2025-10-24T08:39:26.059Z] [32minfo[39m: 🔗 Ngrok tunnel established at: https://weldon-blousier-vance.ngrok-free.dev

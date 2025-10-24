@@ -11,6 +11,7 @@ router.get("/:id", itemController.getById);
 router.post("/", validate(createItemSchema), itemController.create);
 router.put("/:id", validate(updateItemSchema), itemController.update);
 router.delete("/:id", itemController.remove);
+router.get("/:shopId/:categoryId",itemController.getByCategory)
 
 // Custom
 

@@ -9,6 +9,7 @@ import {
   createRefreshToken,
   verifyRefreshToken,
 } from "@/utils/jwt";
+import { AppError } from "@/utils/appError";
 
 class UserController extends BaseController<
   typeof userService,
@@ -21,24 +22,20 @@ class UserController extends BaseController<
 
   login = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const { email, password } = req.body;
-      const user = await this.service.login({ email, password });
-      const { name, phone, type, address, gender } = user;
+      const login = req.body;
+      const user = await this.service.login({
+        email: login.email,
+        password: login.password,
+      });
+      if (!user) {
+        throw new AppError("Invalid email or password.", 401);
+      }
+      const { password, ...userData } = user;
       const tokenPayload = { userName: user?.name, role: user?.type };
       const accessToken = createAccessToken<typeof tokenPayload>(tokenPayload);
       const refreshToken =
         createRefreshToken<typeof tokenPayload>(tokenPayload);
-      const response = this.successResponse(
-        {
-          name,
-          phone,
-          role: type,
-          address,
-          gender,
-          email: user?.email,
-        },
-        "Login successfull!"
-      );
+      const response = this.successResponse(userData, "Login successfull!");
       res.setHeader("access-token", accessToken);
       res.setHeader("x-access-token", refreshToken);
       res.status(200).json(response);

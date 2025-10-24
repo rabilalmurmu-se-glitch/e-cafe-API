@@ -60,6 +60,8 @@ model Users {
   photo     String?
   about     String?     @db.Text
   type      UserTypes   @default(CUSTOMER)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
   OrderList OrderList[]
   Orders    Orders[]
 }
@@ -103,10 +105,16 @@ model Items {
   updatedAt DateTime @updatedAt
 }
 
+enum OrderStatus {
+  CREATED
+  ORDERED
+}
+
 model OrderList {
-  id      Int   @id @unique @default(autoincrement())
+  id      Int         @id @unique @default(autoincrement())
   user_id Int
-  user    Users @relation(fields: [user_id], references: [id])
+  user    Users       @relation(fields: [user_id], references: [id])
+  status  OrderStatus @default(CREATED)
 
   createdAt DateTime    @default(now())
   updatedAt DateTime    @updatedAt

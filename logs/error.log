@@ -823,3 +823,36 @@ Please make sure your database server is running at `localhost:5432`.
 [2025-10-20T10:43:57.975Z] [31merror[39m: Cannot destructure property 'name' of 'user' as it is null.
 [2025-10-20T11:17:14.547Z] [31merror[39m: Cannot destructure property 'name' of 'user' as it is null.
 [2025-10-20T11:17:14.547Z] [31merror[39m: Cannot destructure property 'name' of 'user' as it is null.
+[2025-10-21T09:33:29.754Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T09:33:29.767Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:48:52.639Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:48:52.650Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:50:46.568Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:50:46.577Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:51:35.473Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:51:35.486Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-24T06:11:19.610Z] [31merror[39m: Prisma error during create: P2003 - 
+Invalid `this.client?.create()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:87:33
+
+  84 
+  85 async create<T>(data: T) {
+  86   try {
+→ 87     return await this.client?.create(
+Foreign key constraint violated on the constraint: `ListItems_order_list_id_fkey`
+[2025-10-24T06:11:19.613Z] [31merror[39m: Cannot delete or update record due to foreign key constraint.
+[2025-10-24T06:11:19.613Z] [31merror[39m: Cannot delete or update record due to foreign key constraint.
+[2025-10-24T06:12:59.831Z] [31merror[39m: You have to send user id and item id to add item in list
+[2025-10-24T06:13:50.667Z] [31merror[39m: this.client.find is not a function
+[2025-10-24T06:20:29.693Z] [31merror[39m: Invalid status code: 2001. Status code must be greater than 99 and less than 1000.
+[2025-10-24T07:29:52.979Z] [31merror[39m: Cannot destructure property 'password' of 'user' as it is null.
+[2025-10-24T07:29:52.979Z] [31merror[39m: Cannot destructure property 'password' of 'user' as it is null.
+[2025-10-24T07:36:16.132Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:36:16.132Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:36:30.765Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:36:30.765Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:37:13.384Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:37:13.384Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:37:32.528Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:37:32.528Z] [31merror[39m: Invalid email or password.
+[2025-10-24T08:01:33.321Z] [31merror[39m: You must provide both userId and itemsId to add an item to the list.

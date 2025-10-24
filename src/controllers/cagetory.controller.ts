@@ -13,11 +13,11 @@ class CategoryController extends BaseController<
     super(categoryService);
   }
 
-  async getByShop(req: Request, res: Response) {
+  getByShop = async (req: Request, res: Response) => {
     const { shopId } = req.params;
     const data = await this.service.findByShop(Number(shopId));
     res.status(200).json(data);
-  }
+  };
 }
 
 export const categoryController = new CategoryController();
