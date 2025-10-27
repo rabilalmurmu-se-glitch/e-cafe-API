@@ -105,4 +105,18 @@ export class BaseService<T extends keyof PrismaClient> {
       this.handlePrismaError(error, "delete");
     }
   }
+
+  // 🧩 Transaction support
+  async transaction<T>(
+    callback: (tx: Omit<PrismaClient, "$connect" | "$disconnect">) => Promise<T>
+  ) {
+    try {
+      return await prisma.$transaction(async (tx) => {
+        //@ts-ignore
+        return await callback(tx);
+      });
+    } catch (error) {
+      this.handlePrismaError(error, "transaction");
+    }
+  }
 }

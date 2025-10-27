@@ -856,3 +856,148 @@ Foreign key constraint violated on the constraint: `ListItems_order_list_id_fkey
 [2025-10-24T07:37:32.528Z] [31merror[39m: Invalid email or password.
 [2025-10-24T07:37:32.528Z] [31merror[39m: Invalid email or password.
 [2025-10-24T08:01:33.321Z] [31merror[39m: You must provide both userId and itemsId to add an item to the list.
+[2025-10-27T04:14:42.270Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:42.271Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.271Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.275Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:42.275Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.275Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.282Z] [31merror[39m: 
+Invalid `this.client.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\items.service.ts:10:30
+
+   7 }
+   8 
+   9 async findByCategory(categoryId: number, shopId: number) {
+→ 10   return await this.client.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:42.290Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:42.290Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.290Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.294Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:42.294Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.294Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.300Z] [31merror[39m: 
+Invalid `this.client.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\items.service.ts:10:30
+
+   7 }
+   8 
+   9 async findByCategory(categoryId: number, shopId: number) {
+→ 10   return await this.client.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:52.933Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:52.935Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:52.935Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:52.953Z] [31merror[39m: 
+Invalid `this.client.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\category.service.ts:10:30
+
+   7 }
+   8 
+   9 async findByShop(shopId: number) {
+→ 10   return await this.client.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:52.961Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:52.962Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:52.962Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:52.967Z] [31merror[39m: 
+Invalid `this.client.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\category.service.ts:10:30
+
+   7 }
+   8 
+   9 async findByShop(shopId: number) {
+→ 10   return await this.client.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T05:14:55.179Z] [31merror[39m: 
+Invalid `this.client.findFirst()` invocation in
+D:\projects\E-cafe\back-end\src\services\orderList.service.ts:9:30
+
+  6 }
+  7 
+  8 getListByUser = async (userId: number) => {
+→ 9   return await this.client.findFirst(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T05:14:55.189Z] [31merror[39m: 
+Invalid `this.client.findFirst()` invocation in
+D:\projects\E-cafe\back-end\src\services\orderList.service.ts:9:30
+
+  6 }
+  7 
+  8 getListByUser = async (userId: number) => {
+→ 9   return await this.client.findFirst(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T08:25:34.818Z] [31merror[39m: Cannot destructure property 'orderListId' of 'req.order' as it is undefined.
