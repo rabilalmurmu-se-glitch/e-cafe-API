@@ -1,8 +1,8 @@
 // src/routes/type.routes.ts
 import { Router } from "express";
-import { typeController } from "../controllers/types.controller";
-import { validate } from "../middlewares/validateRequest";
-import { createTypeSchema, updateTypeSchema } from "../dtos/types.dto";
+import { typeController } from "@/controllers/types.controller";
+import { validate } from "@/middlewares/validateRequest";
+import { createTypeSchema, updateTypeSchema } from "@/dtos/types.dto";
 
 const router = Router();
 

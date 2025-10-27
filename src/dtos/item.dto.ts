@@ -6,6 +6,7 @@ export const createItemSchema = z.object({
   price: z.number().int().positive(),
   category_id: z.number().int().positive(),
   shop_id: z.number().int().positive(),
+  photo: z.string().optional(),
 });
 
 export const updateItemSchema = createItemSchema.partial();

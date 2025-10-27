@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { categoryController } from "../controllers/cagetory.controller";
-import { validate } from "../middlewares/validateRequest";
+import { categoryController } from "@/controllers/cagetory.controller";
+import { validate } from "@/middlewares/validateRequest";
 import {
   createCategorySchema,
   updateCategorySchema,
@@ -13,6 +13,7 @@ router.get("/:id", categoryController.getById);
 router.post("/", validate(createCategorySchema), categoryController.create);
 router.put("/:id", validate(updateCategorySchema), categoryController.update);
 router.delete("/:id", categoryController.remove);
+router.get('/shop/:shopId',categoryController.getByShop);
 
 // Custom
 

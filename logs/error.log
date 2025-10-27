@@ -771,3 +771,233 @@ D:\projects\E-cafe\back-end\src\services\user.service.ts:10:32
 Argument `where` of type UsersWhereUniqueInput needs at least one of `id` or `id` arguments. Available options are marked with ?.
 [2025-10-15T08:55:18.520Z] [31merror[39m: Invalid data format for database operation.
 [2025-10-15T08:55:18.520Z] [31merror[39m: Invalid data format for database operation.
+[2025-10-17T04:35:13.620Z] [31merror[39m: Database initialization error: 
+Invalid `this.client?.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:69:33
+
+  66 
+  67 async findAll(where = {}, include = this.include) {
+  68   try {
+→ 69     return await this.client?.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+[2025-10-17T04:35:13.623Z] [31merror[39m: Database connection failed.
+[2025-10-17T04:35:13.623Z] [31merror[39m: Database connection failed.
+[2025-10-18T06:17:51.330Z] [31merror[39m: Unexpected token '-', "------WebK"... is not valid JSON
+[2025-10-18T06:24:47.337Z] [31merror[39m: Unexpected token '-', "------WebK"... is not valid JSON
+[2025-10-18T06:25:50.656Z] [31merror[39m: Unexpected token '-', "------WebK"... is not valid JSON
+[2025-10-18T06:27:14.591Z] [31merror[39m: Multipart: Boundary not found
+[2025-10-18T06:29:02.040Z] [31merror[39m: Multipart: Boundary not found
+[2025-10-18T06:31:10.843Z] [31merror[39m: Multipart: Boundary not found
+[2025-10-18T06:35:00.527Z] [31merror[39m: Multipart: Boundary not found
+[2025-10-18T06:35:40.258Z] [31merror[39m: Multipart: Boundary not found
+[2025-10-18T06:36:01.865Z] [31merror[39m: Multipart: Boundary not found
+[2025-10-18T06:36:42.003Z] [31merror[39m: Multipart: Boundary not found
+[2025-10-18T06:37:58.297Z] [31merror[39m: Multipart: Boundary not found
+[2025-10-18T06:38:33.721Z] [31merror[39m: Database initialization error: 
+Invalid `this.client?.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:68:33
+
+  65 
+  66 async findAll(where = {}, include = this.include) {
+  67   try {
+→ 68     return await this.client?.findMany(
+Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+[2025-10-18T06:38:33.724Z] [31merror[39m: Database connection failed.
+[2025-10-18T06:38:33.724Z] [31merror[39m: Database connection failed.
+[2025-10-18T06:40:01.891Z] [31merror[39m: Multipart: Boundary not found
+[2025-10-18T07:03:54.300Z] [31merror[39m: Unexpected end of form
+[2025-10-18T07:04:52.032Z] [31merror[39m: Multipart: Boundary not found
+[2025-10-18T07:05:29.611Z] [31merror[39m: Unexpected end of form
+[2025-10-18T08:02:51.143Z] [31merror[39m: Access Denied
+[2025-10-18T08:04:37.115Z] [31merror[39m: Access Denied
+[2025-10-18T08:11:04.410Z] [31merror[39m: Access Denied
+[2025-10-18T08:11:48.041Z] [31merror[39m: Access Denied
+[2025-10-19T05:33:12.077Z] [31merror[39m: Multipart: Boundary not found
+[2025-10-19T05:33:43.219Z] [31merror[39m: ENOENT: no such file or directory, open 'D:\projects\E-cafe\back-end\uploads\1760852023215-postgresSQLDB.webp'
+[2025-10-19T08:19:13.894Z] [31merror[39m: Multipart: Boundary not found
+[2025-10-20T10:43:57.975Z] [31merror[39m: Cannot destructure property 'name' of 'user' as it is null.
+[2025-10-20T10:43:57.975Z] [31merror[39m: Cannot destructure property 'name' of 'user' as it is null.
+[2025-10-20T11:17:14.547Z] [31merror[39m: Cannot destructure property 'name' of 'user' as it is null.
+[2025-10-20T11:17:14.547Z] [31merror[39m: Cannot destructure property 'name' of 'user' as it is null.
+[2025-10-21T09:33:29.754Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T09:33:29.767Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:48:52.639Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:48:52.650Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:50:46.568Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:50:46.577Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:51:35.473Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-21T11:51:35.486Z] [31merror[39m: Cannot read properties of undefined (reading 'service')
+[2025-10-24T06:11:19.610Z] [31merror[39m: Prisma error during create: P2003 - 
+Invalid `this.client?.create()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:87:33
+
+  84 
+  85 async create<T>(data: T) {
+  86   try {
+→ 87     return await this.client?.create(
+Foreign key constraint violated on the constraint: `ListItems_order_list_id_fkey`
+[2025-10-24T06:11:19.613Z] [31merror[39m: Cannot delete or update record due to foreign key constraint.
+[2025-10-24T06:11:19.613Z] [31merror[39m: Cannot delete or update record due to foreign key constraint.
+[2025-10-24T06:12:59.831Z] [31merror[39m: You have to send user id and item id to add item in list
+[2025-10-24T06:13:50.667Z] [31merror[39m: this.client.find is not a function
+[2025-10-24T06:20:29.693Z] [31merror[39m: Invalid status code: 2001. Status code must be greater than 99 and less than 1000.
+[2025-10-24T07:29:52.979Z] [31merror[39m: Cannot destructure property 'password' of 'user' as it is null.
+[2025-10-24T07:29:52.979Z] [31merror[39m: Cannot destructure property 'password' of 'user' as it is null.
+[2025-10-24T07:36:16.132Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:36:16.132Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:36:30.765Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:36:30.765Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:37:13.384Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:37:13.384Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:37:32.528Z] [31merror[39m: Invalid email or password.
+[2025-10-24T07:37:32.528Z] [31merror[39m: Invalid email or password.
+[2025-10-24T08:01:33.321Z] [31merror[39m: You must provide both userId and itemsId to add an item to the list.
+[2025-10-27T04:14:42.270Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:42.271Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.271Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.275Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:42.275Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.275Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.282Z] [31merror[39m: 
+Invalid `this.client.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\items.service.ts:10:30
+
+   7 }
+   8 
+   9 async findByCategory(categoryId: number, shopId: number) {
+→ 10   return await this.client.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:42.290Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:42.290Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.290Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.294Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:42.294Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.294Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:42.300Z] [31merror[39m: 
+Invalid `this.client.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\items.service.ts:10:30
+
+   7 }
+   8 
+   9 async findByCategory(categoryId: number, shopId: number) {
+→ 10   return await this.client.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:52.933Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:52.935Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:52.935Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:52.953Z] [31merror[39m: 
+Invalid `this.client.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\category.service.ts:10:30
+
+   7 }
+   8 
+   9 async findByShop(shopId: number) {
+→ 10   return await this.client.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:52.961Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T04:14:52.962Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:52.962Z] [31merror[39m: Database operation failed.
+[2025-10-27T04:14:52.967Z] [31merror[39m: 
+Invalid `this.client.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\category.service.ts:10:30
+
+   7 }
+   8 
+   9 async findByShop(shopId: number) {
+→ 10   return await this.client.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T05:14:55.179Z] [31merror[39m: 
+Invalid `this.client.findFirst()` invocation in
+D:\projects\E-cafe\back-end\src\services\orderList.service.ts:9:30
+
+  6 }
+  7 
+  8 getListByUser = async (userId: number) => {
+→ 9   return await this.client.findFirst(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T05:14:55.189Z] [31merror[39m: 
+Invalid `this.client.findFirst()` invocation in
+D:\projects\E-cafe\back-end\src\services\orderList.service.ts:9:30
+
+  6 }
+  7 
+  8 getListByUser = async (userId: number) => {
+→ 9   return await this.client.findFirst(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-27T08:25:34.818Z] [31merror[39m: Cannot destructure property 'orderListId' of 'req.order' as it is undefined.

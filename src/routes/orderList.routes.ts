@@ -1,11 +1,11 @@
 // src/routes/orderList.routes.ts
 import { Router } from "express";
-import { orderListController } from "../controllers/orderList.controller";
-import { validate } from "../middlewares/validateRequest";
+import { orderListController } from "@/controllers/orderList.controller";
+import { validate } from "@/middlewares/validateRequest";
 import {
   createOrderListSchema,
   updateOrderListSchema,
-} from "../dtos/orderList.dto";
+} from "@/dtos/orderList.dto";
 
 const router = Router();
 

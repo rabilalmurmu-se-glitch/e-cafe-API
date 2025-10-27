@@ -10,7 +10,7 @@ export const createShopSchema = z.object({
   logo: z.string(),
   about_shop: z.string(),
   shop_mission: z.string(),
-  social: z.record(z.any()), // For JSON field
+  social: z.record(z.string(), z.string()), // For JSON field
 });
 
 export const updateShopSchema = createShopSchema.partial();

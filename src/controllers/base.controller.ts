@@ -1,9 +1,8 @@
 import { Request, Response, NextFunction } from "express";
-import { BaseService } from "../services/base.service";
-import logger from "../utils/logger";
-import { ResponsePayload } from "../utils/response";
-import { AppError } from "../utils/appError";
-import { Prisma } from "../generated/prisma";
+import { BaseService } from "@/services/base.service";
+import logger from "@/utils/logger";
+import { ResponsePayload } from "@/utils/response";
+import { AppError } from "@/utils/appError";
 
 export class BaseController<T extends BaseService<any>, CType, UType> {
   constructor(protected service: T) {}

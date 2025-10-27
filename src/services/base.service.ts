@@ -1,7 +1,6 @@
-// src/services/base.service.ts
-import { PrismaClient, Prisma } from "../generated/prisma/client";
-import { AppError } from "../utils/appError"; // Your custom error class
-import logger from "../utils/logger"; // Optional but recommended
+import { PrismaClient, Prisma } from "@/generated/prisma/client";
+import { AppError } from "@/utils/appError"; // Your custom error class
+import logger from "@/utils/logger"; // Optional but recommended
 
 const prisma = new PrismaClient();
 
@@ -104,6 +103,20 @@ export class BaseService<T extends keyof PrismaClient> {
       return await this.client?.delete({ where: { id: Number(id) } });
     } catch (error) {
       this.handlePrismaError(error, "delete");
+    }
+  }
+
+  // 🧩 Transaction support
+  async transaction<T>(
+    callback: (tx: Omit<PrismaClient, "$connect" | "$disconnect">) => Promise<T>
+  ) {
+    try {
+      return await prisma.$transaction(async (tx) => {
+        //@ts-ignore
+        return await callback(tx);
+      });
+    } catch (error) {
+      this.handlePrismaError(error, "transaction");
     }
   }
 }

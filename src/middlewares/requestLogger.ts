@@ -1,5 +1,5 @@
 import morgan from "morgan";
-import logger from "../utils/logger";
+import logger from "@/utils/logger";
 
 // Custom Morgan stream to route logs into Winston
 const stream = {

@@ -6,8 +6,10 @@ export class ItemService extends BaseService<"items"> {
     super("items");
   }
 
-  async findByCategory(categoryId: number) {
-    return await this.client.findMany({ where: { category_id: categoryId } });
+  async findByCategory(categoryId: number, shopId: number) {
+    return await this.client.findMany({
+      where: { category_id: categoryId, shop_id: shopId },
+    });
   }
 
   async findByShop(shopId: number) {

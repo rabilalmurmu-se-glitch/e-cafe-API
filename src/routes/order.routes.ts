@@ -1,8 +1,8 @@
 // src/routes/order.routes.ts
 import { Router } from "express";
-import { orderController } from "../controllers/order.controller";
-import { validate } from "../middlewares/validateRequest";
-import { createOrderSchema, updateOrderSchema } from "../dtos/order.dto";
+import { orderController } from "@/controllers/order.controller";
+import { validate } from "@/middlewares/validateRequest";
+import { createOrderSchema, updateOrderSchema } from "@/dtos/order.dto";
 
 const router = Router();
 
