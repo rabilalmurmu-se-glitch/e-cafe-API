@@ -1,16 +1,36 @@
 // src/routes/user.routes.ts
 import { Router } from "express";
-import { userController } from "../controllers/user.controller";
+import { userController } from "@/controllers/user.controller";
+import { validate } from "@/middlewares/validateRequest";
+import {
+  createUserSchema,
+  loginUserSchema,
+  updateUserSchema,
+} from "@/dtos/user.dto";
+import upload from "@/utils/multer";
+import { preProcessFormData } from "@/middlewares/formDataPreProcess";
 
 const router = Router();
 
 router.get("/", userController.getAll);
 router.get("/:id", userController.getById);
-router.post("/", userController.create);
-router.put("/:id", userController.update);
+router.post("/", validate(createUserSchema), userController.create);
+router.put(
+  "/:id",
+  upload.single("file"),
+  preProcessFormData,
+  validate(updateUserSchema),
+  userController.update
+);
 router.delete("/:id", userController.remove);
 
-// Custom
-// router.get("/email/:email", userController.findByEmail);
+router.post("/login", validate(loginUserSchema), userController.login);
+router.post(
+  "/registration",
+  validate(createUserSchema),
+  userController.registration
+);
+
+router.post("/refresh-token", userController.refreshToken);
 
 export default router;

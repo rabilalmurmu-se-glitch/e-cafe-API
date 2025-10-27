@@ -1,9 +1,10 @@
 // src/controllers/shop.controller.ts
 import { Request, Response } from "express";
 import { BaseController } from "./base.controller";
-import { shopServices } from "../services/shop.service";
+import { shopServices } from "@/services/shop.service";
+import { CreateShopDto, UpdateShopDto } from "@/dtos/shop.dto";
 
-class ShopController extends BaseController<typeof shopServices> {
+class ShopController extends BaseController<typeof shopServices,CreateShopDto,UpdateShopDto> {
   constructor() {
     super(shopServices);
   }

@@ -1,6 +1,22 @@
 
-DATABASE_URL="postgresql://postgres:password@localhost:5432/e_cafe_db?schema=public"
+DATABASE_URL=""
 
 ### APP CONFIG ###
 PORT=500
-ENV='Development'
+APP_ENV='development'
+
+## JWT config
+JWT_ACCESSTOKET_SECRET=''
+JWT_ACCESSTOKET_SECRET_EXPIRES_IN=''
+
+JWT_REFRESHTOKEN_SECRET=''
+JWT_REFRESHTOKEN_SECRET_EXPIRES_IN=''
+
+#ngrok config
+NGROK_AUTHTOKEN=""
+
+# R2 Bucket config
+ACCOUNT_ID=""
+ACCESS_KEY_ID=""
+SECRET_ACCESS_KEY=""
+BUCKET_NAME=""
