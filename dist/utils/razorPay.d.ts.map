@@ -1,0 +1,1 @@
+{"version":3,"file":"razorPay.d.ts","sourceRoot":"","sources":["../../src/utils/razorPay.ts"],"names":[],"mappings":"AACA,OAAO,QAAQ,MAAM,UAAU,CAAC;AAEhC,eAAO,MAAM,QAAQ,UAGnB,CAAC;AAEH,MAAM,WAAW,iBAAiB;IAChC,MAAM,EAAE,MAAM,CAAC;IACf,QAAQ,EAAE,MAAM,CAAC;IACjB,OAAO,EAAE,MAAM,CAAC;CACjB;AACD,eAAO,MAAM,WAAW,GAAU,QAAQ,iBAAiB,uEAE1D,CAAC"}

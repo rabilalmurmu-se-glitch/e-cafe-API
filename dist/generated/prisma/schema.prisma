@@ -1,0 +1,153 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+generator erd {
+  provider = "prisma-erd-generator"
+  output   = "./ERD.png"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Shop {
+  id           Int          @id @unique @default(autoincrement())
+  name         String       @unique
+  address      String
+  email        String
+  phone        String
+  owner        String
+  banner       String
+  logo         String
+  about_shop   String
+  shop_mission String
+  social       Json         @db.Json
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  Categories   Categories[]
+  Items        Items[]
+}
+
+model Users {
+  id        Int         @id @unique @default(autoincrement())
+  name      String
+  email     String
+  phone     String?
+  password  String
+  address   String?
+  gender    Genders
+  type      UserTypes   @default(CUSTOMER)
+  about     String?
+  createdAt DateTime    @default(now())
+  photo     String?
+  updatedAt DateTime    @updatedAt
+  OrderList OrderList[]
+  Orders    Orders[]
+  Payment   Payment[]
+}
+
+model Types {
+  id         Int          @id @unique @default(autoincrement())
+  type       String
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime     @updatedAt
+  Categories Categories[]
+}
+
+model Categories {
+  id        Int      @id @unique @default(autoincrement())
+  name      String
+  type_id   Int
+  shop_id   Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  photo     String?
+  shop      Shop     @relation(fields: [shop_id], references: [id])
+  type      Types    @relation(fields: [type_id], references: [id])
+  Items     Items[]
+}
+
+model Items {
+  id          Int         @id @unique @default(autoincrement())
+  name        String
+  description String
+  price       Int
+  category_id Int
+  shop_id     Int
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  photo       String?
+  category    Categories  @relation(fields: [category_id], references: [id])
+  shop        Shop        @relation(fields: [shop_id], references: [id])
+  ListItems   ListItems[]
+}
+
+model OrderList {
+  id        Int         @id @unique @default(autoincrement())
+  user_id   Int
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  status    OrderStatus @default(CREATED)
+  ListItems ListItems[]
+  user      Users       @relation(fields: [user_id], references: [id])
+  Orders    Orders[]
+}
+
+model ListItems {
+  id            Int       @id @unique @default(autoincrement())
+  order_list_id Int
+  item_id       Int
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  quantity      Int       @default(1)
+  item          Items     @relation(fields: [item_id], references: [id])
+  order_list    OrderList @relation(fields: [order_list_id], references: [id])
+}
+
+model Payment {
+  id             Int      @id @default(autoincrement())
+  amount         Int
+  currency       String   @default("INR")
+  payment_method String?
+  transaction_id String?  @unique
+  order_id       String?  @unique
+  status         String
+  userId         Int?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  order          Orders?  @relation(fields: [order_id], references: [order_id])
+  user           Users?   @relation(fields: [userId], references: [id])
+}
+
+model Orders {
+  id            Int       @id @unique @default(autoincrement())
+  order_id      String    @unique
+  order_list_id Int
+  user_id       Int
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  status        String
+  total_price   Int
+  order_list    OrderList @relation(fields: [order_list_id], references: [id])
+  user          Users     @relation(fields: [user_id], references: [id])
+  Payment       Payment[]
+}
+
+enum Genders {
+  MALE
+  FEMALE
+}
+
+enum UserTypes {
+  CUSTOMER
+  OWNER
+  MAMBER
+}
+
+enum OrderStatus {
+  CREATED
+  ORDERED
+}
