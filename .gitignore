@@ -7,6 +7,3 @@ dist
 backup.sql
 
 #for production branch
-/prisma
-/src
-/UI
