@@ -1001,3 +1001,438 @@ Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.
 
 Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
 [2025-10-27T08:25:34.818Z] [31merror[39m: Cannot destructure property 'orderListId' of 'req.order' as it is undefined.
+[2025-10-28T16:12:28.077Z] [31merror[39m: Invalid signature
+[2025-10-29T09:01:52.371Z] [31merror[39m: Prisma error during findAll: P1001 - 
+Invalid `this.client?.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:68:33
+
+  65 
+  66 async findAll(where = {}, include = this.include) {
+  67   try {
+→ 68     return await this.client?.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-29T09:01:52.452Z] [31merror[39m: Prisma error during findAll: P1001 - 
+Invalid `this.client?.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:68:33
+
+  65 
+  66 async findAll(where = {}, include = this.include) {
+  67   try {
+→ 68     return await this.client?.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-29T09:01:52.520Z] [31merror[39m: Database operation failed.
+[2025-10-29T09:01:52.549Z] [31merror[39m: Database operation failed.
+[2025-10-29T09:57:07.428Z] [31merror[39m: Prisma error during findAll: P1001 - 
+Invalid `this.client?.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:68:33
+
+  65 
+  66 async findAll(where = {}, include = this.include) {
+  67   try {
+→ 68     return await this.client?.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-29T09:57:07.432Z] [31merror[39m: Prisma error during findAll: P1001 - 
+Invalid `this.client?.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:68:33
+
+  65 
+  66 async findAll(where = {}, include = this.include) {
+  67   try {
+→ 68     return await this.client?.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-29T09:57:07.434Z] [31merror[39m: Database operation failed.
+[2025-10-29T09:57:07.437Z] [31merror[39m: Database operation failed.
+[2025-10-31T02:24:31.003Z] [31merror[39m: Invalid email or password.
+[2025-10-31T02:24:31.003Z] [31merror[39m: Invalid email or password.
+[2025-10-31T04:16:50.875Z] [31merror[39m: Prisma error during findAll: P1001 - 
+Invalid `this.client?.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:68:33
+
+  65 
+  66 async findAll(where = {}, include = this.include, orderBy = {}) {
+  67   try {
+→ 68     return await this.client?.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T04:16:50.883Z] [31merror[39m: Prisma error during findAll: P1001 - 
+Invalid `this.client?.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:68:33
+
+  65 
+  66 async findAll(where = {}, include = this.include, orderBy = {}) {
+  67   try {
+→ 68     return await this.client?.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T04:16:50.886Z] [31merror[39m: Database operation failed.
+[2025-10-31T04:16:50.890Z] [31merror[39m: Database operation failed.
+[2025-10-31T04:17:16.802Z] [31merror[39m: Prisma error during findAll: P1001 - 
+Invalid `this.client?.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:68:33
+
+  65 
+  66 async findAll(where = {}, include = this.include, orderBy = {}) {
+  67   try {
+→ 68     return await this.client?.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T04:17:16.804Z] [31merror[39m: Prisma error during findAll: P1001 - 
+Invalid `this.client?.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:68:33
+
+  65 
+  66 async findAll(where = {}, include = this.include, orderBy = {}) {
+  67   try {
+→ 68     return await this.client?.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T04:17:16.807Z] [31merror[39m: Database operation failed.
+[2025-10-31T04:17:16.809Z] [31merror[39m: Database operation failed.
+[2025-10-31T04:18:23.167Z] [31merror[39m: Prisma error during findAll: P1001 - 
+Invalid `this.client?.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:68:33
+
+  65 
+  66 async findAll(where = {}, include = this.include, orderBy = {}) {
+  67   try {
+→ 68     return await this.client?.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T04:18:23.169Z] [31merror[39m: Prisma error during findAll: P1001 - 
+Invalid `this.client?.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:68:33
+
+  65 
+  66 async findAll(where = {}, include = this.include, orderBy = {}) {
+  67   try {
+→ 68     return await this.client?.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T04:18:23.169Z] [31merror[39m: Database operation failed.
+[2025-10-31T04:18:23.171Z] [31merror[39m: Database operation failed.
+[2025-10-31T05:13:00.959Z] [31merror[39m: Prisma error during findAll: P1001 - 
+Invalid `this.client?.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:68:33
+
+  65 
+  66 async findAll(where = {}, include = this.include, orderBy = {}) {
+  67   try {
+→ 68     return await this.client?.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T05:13:00.963Z] [31merror[39m: Prisma error during findAll: P1001 - 
+Invalid `this.client?.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:68:33
+
+  65 
+  66 async findAll(where = {}, include = this.include, orderBy = {}) {
+  67   try {
+→ 68     return await this.client?.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T05:13:00.964Z] [31merror[39m: Database operation failed.
+[2025-10-31T05:13:00.965Z] [31merror[39m: Database operation failed.
+[2025-10-31T07:07:36.583Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T07:07:36.593Z] [31merror[39m: Database operation failed.
+[2025-10-31T07:07:36.593Z] [31merror[39m: Database operation failed.
+[2025-10-31T07:07:36.614Z] [31merror[39m: 
+Invalid `this.client.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\items.service.ts:10:30
+
+   7 }
+   8 
+   9 async findByCategory(categoryId: number, shopId: number) {
+→ 10   return await this.client.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T07:07:36.625Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T07:07:36.626Z] [31merror[39m: Database operation failed.
+[2025-10-31T07:07:36.626Z] [31merror[39m: Database operation failed.
+[2025-10-31T07:07:36.648Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T07:07:36.649Z] [31merror[39m: Database operation failed.
+[2025-10-31T07:07:36.649Z] [31merror[39m: Database operation failed.
+[2025-10-31T07:07:36.654Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T07:07:36.657Z] [31merror[39m: Database operation failed.
+[2025-10-31T07:07:36.657Z] [31merror[39m: Database operation failed.
+[2025-10-31T07:07:36.667Z] [31merror[39m: 
+Invalid `this.client.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\items.service.ts:10:30
+
+   7 }
+   8 
+   9 async findByCategory(categoryId: number, shopId: number) {
+→ 10   return await this.client.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T08:30:15.168Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T08:30:15.169Z] [31merror[39m: Database operation failed.
+[2025-10-31T08:30:15.169Z] [31merror[39m: Database operation failed.
+[2025-10-31T08:30:15.172Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T08:30:15.172Z] [31merror[39m: Database operation failed.
+[2025-10-31T08:30:15.172Z] [31merror[39m: Database operation failed.
+[2025-10-31T08:30:15.179Z] [31merror[39m: 
+Invalid `this.client.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\items.service.ts:10:30
+
+   7 }
+   8 
+   9 async findByCategory(categoryId: number, shopId: number) {
+→ 10   return await this.client.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T08:30:15.184Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T08:30:15.185Z] [31merror[39m: Database operation failed.
+[2025-10-31T08:30:15.185Z] [31merror[39m: Database operation failed.
+[2025-10-31T08:30:15.190Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T08:30:15.191Z] [31merror[39m: Database operation failed.
+[2025-10-31T08:30:15.191Z] [31merror[39m: Database operation failed.
+[2025-10-31T08:30:15.196Z] [31merror[39m: 
+Invalid `this.client.findMany()` invocation in
+D:\projects\E-cafe\back-end\src\services\items.service.ts:10:30
+
+   7 }
+   8 
+   9 async findByCategory(categoryId: number, shopId: number) {
+→ 10   return await this.client.findMany(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T10:17:46.176Z] [31merror[39m: Invalid email or password.
+[2025-10-31T10:17:46.176Z] [31merror[39m: Invalid email or password.
+[2025-10-31T10:40:11.637Z] [31merror[39m: Validation error during transaction: 
+Invalid `tex.orders.create()` invocation in
+D:\projects\E-cafe\back-end\src\services\orders.service.ts:11:38
+
+   8 createOrder = async (paload: any) => {
+   9   return await this.transaction(async (tex) => {
+  10     const { paymethod, ...orderPaload } = paload;
+→ 11     const order = await tex.orders.create({
+           data: {
+             order_id: "order_Ra3Bht3ItWwdL2",
+             order_list_id: 9,
+             user_id: 1,
+             total_price: 220,
+             status: "PENDING",
+             table_number: "10"
+                           ~~~~
+           }
+         })
+
+Argument `table_number`: Invalid value provided. Expected Int or Null, provided String.
+[2025-10-31T10:40:11.639Z] [31merror[39m: Invalid data format for database operation.
+[2025-10-31T10:40:30.572Z] [31merror[39m: Validation error during transaction: 
+Invalid `tex.orders.create()` invocation in
+D:\projects\E-cafe\back-end\src\services\orders.service.ts:11:38
+
+   8 createOrder = async (paload: any) => {
+   9   return await this.transaction(async (tex) => {
+  10     const { paymethod, ...orderPaload } = paload;
+→ 11     const order = await tex.orders.create({
+           data: {
+             order_id: "order_Ra3C2p7cYEtQPA",
+             order_list_id: 9,
+             user_id: 1,
+             total_price: 220,
+             status: "PENDING",
+             table_number: "3"
+                           ~~~
+           }
+         })
+
+Argument `table_number`: Invalid value provided. Expected Int or Null, provided String.
+[2025-10-31T10:40:30.573Z] [31merror[39m: Invalid data format for database operation.
+[2025-10-31T10:40:59.187Z] [31merror[39m: Invalid email or password.
+[2025-10-31T10:40:59.187Z] [31merror[39m: Invalid email or password.
+[2025-10-31T10:41:30.355Z] [31merror[39m: Validation error during transaction: 
+Invalid `tex.orders.create()` invocation in
+D:\projects\E-cafe\back-end\src\services\orders.service.ts:11:38
+
+   8 createOrder = async (paload: any) => {
+   9   return await this.transaction(async (tex) => {
+  10     const { paymethod, ...orderPaload } = paload;
+→ 11     const order = await tex.orders.create({
+           data: {
+             order_id: "order_Ra3D5wWkJnU7hG",
+             order_list_id: 9,
+             user_id: 1,
+             total_price: 220,
+             status: "PENDING",
+             table_number: "20"
+                           ~~~~
+           }
+         })
+
+Argument `table_number`: Invalid value provided. Expected Int or Null, provided String.
+[2025-10-31T10:41:30.357Z] [31merror[39m: Invalid data format for database operation.
+[2025-10-31T10:41:56.262Z] [31merror[39m: Validation error during transaction: 
+Invalid `tex.orders.create()` invocation in
+D:\projects\E-cafe\back-end\src\services\orders.service.ts:11:38
+
+   8 createOrder = async (paload: any) => {
+   9   return await this.transaction(async (tex) => {
+  10     const { paymethod, ...orderPaload } = paload;
+→ 11     const order = await tex.orders.create({
+           data: {
+             order_id: "order_Ra3DYAIkHlmHqd",
+             order_list_id: 9,
+             user_id: 1,
+             total_price: 220,
+             status: "PENDING",
+             table_number: "20"
+                           ~~~~
+           }
+         })
+
+Argument `table_number`: Invalid value provided. Expected Int or Null, provided String.
+[2025-10-31T10:41:56.263Z] [31merror[39m: Invalid data format for database operation.
+[2025-10-31T14:38:39.072Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T14:38:39.082Z] [31merror[39m: Database operation failed.
+[2025-10-31T14:38:39.082Z] [31merror[39m: Database operation failed.
+[2025-10-31T14:38:39.097Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T14:38:39.100Z] [31merror[39m: Database operation failed.
+[2025-10-31T14:38:39.100Z] [31merror[39m: Database operation failed.
+[2025-10-31T14:38:39.207Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T14:38:39.208Z] [31merror[39m: Database operation failed.
+[2025-10-31T14:38:39.208Z] [31merror[39m: Database operation failed.
+[2025-10-31T14:38:39.220Z] [31merror[39m: Prisma error during findById: P1001 - 
+Invalid `this.client?.findUnique()` invocation in
+D:\projects\E-cafe\back-end\src\services\base.service.ts:76:33
+
+  73 
+  74 async findById(id: number | string, include = this.include) {
+  75   try {
+→ 76     return await this.client?.findUnique(
+Can't reach database server at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-damp-hall-a16817yo-pooler.ap-southeast-1.aws.neon.tech:5432`.
+[2025-10-31T14:38:39.222Z] [31merror[39m: Database operation failed.
+[2025-10-31T14:38:39.222Z] [31merror[39m: Database operation failed.
