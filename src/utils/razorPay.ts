@@ -14,3 +14,7 @@ export interface CreateOrderOption {
 export const createOrder = async (option: CreateOrderOption) => {
   return await rozorPay.orders.create(option);
 };
+
+export const paymentDetails = async (paymentId: string) => {
+  return await rozorPay.payments.fetch(paymentId);
+};

@@ -63,9 +63,9 @@ export class BaseService<T extends keyof PrismaClient> {
     throw new AppError("Unexpected database error.", 500);
   }
 
-  async findAll(where = {}, include = this.include) {
+  async findAll(where = {}, include = this.include, orderBy = {}) {
     try {
-      return await this.client?.findMany({ where, include });
+      return await this.client?.findMany({ where, include, orderBy });
     } catch (error) {
       this.handlePrismaError(error, "findAll");
     }

@@ -1,6 +1,6 @@
 generator client {
-  provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
+  provider      = "prisma-client-js"
+  output        = "../src/generated/prisma"
   binaryTargets = ["native", "debian-openssl-3.0.x"]
 }
 
@@ -20,6 +20,7 @@ model Shop {
   logo         String
   about_shop   String
   shop_mission String
+  max_table    Int?
   social       Json         @db.Json
   createdAt    DateTime     @default(now())
   updatedAt    DateTime     @updatedAt
@@ -111,6 +112,7 @@ model Payment {
   transaction_id String?  @unique
   order_id       String?  @unique
   status         String
+  payment_info   Json?    @db.Json
   userId         Int?
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
@@ -127,9 +129,20 @@ model Orders {
   updatedAt     DateTime  @updatedAt
   status        String
   total_price   Int
+  table_number  Int?
   order_list    OrderList @relation(fields: [order_list_id], references: [id])
   user          Users     @relation(fields: [user_id], references: [id])
   Payment       Payment[]
+}
+
+model Leads {
+  id        Int      @id @unique @default(autoincrement())
+  name      String
+  email     String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 enum Genders {
