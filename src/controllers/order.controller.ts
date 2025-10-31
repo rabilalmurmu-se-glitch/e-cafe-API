@@ -44,7 +44,7 @@ class OrderController extends BaseController<
         total_price: total,
         status: isPostpaid ? "ORDER PLACED" : "PENDING",
         paymethod: modOfPay,
-        table_number: tableNumber,
+        table_number: Number(tableNumber),
       };
       const result = await orderServices.createOrder(payload);
       const response = this.successResponse(
