@@ -1,202 +1,132 @@
-## Back-End API (Express + TypeScript + Prisma)
+## E‑Cafe — Back-end API
 
-### Overview
-A RESTful API built with Express 5 and TypeScript, using Prisma as the ORM for a PostgreSQL database. The service manages core resources like shops, users, types, categories, items, order lists, list items, and orders. Logging is handled via Winston with request logging from Morgan.
+Lightweight REST API for the E‑Cafe application. Built with Express (v5) and TypeScript, using Prisma for database access (PostgreSQL). The API serves a Vite-built frontend (in `client/`) and exposes resources for shops, users, types, categories, items, order-lists, list-items and orders.
 
-### Tech Stack
-- **Runtime**: Node.js
-- **Framework**: Express 5
-- **Language**: TypeScript 5
-- **ORM**: Prisma (PostgreSQL)
-- **Authentication**: JWT (JSON Web Tokens)
-- **Logging**: Winston + Morgan
-- **Environment Management**: dotenv
+Key features
+- RESTful resources with controllers and services
+- TypeScript-first codebase with path aliases
+- Prisma ORM + migrations
+- JWT-based authentication
+- File uploads served from `/uploads`
+- Winston + Morgan logging
 
-### Prerequisites
-- **Node.js** 18+ (20+ recommended)
-- **npm** (comes with Node)
-- **PostgreSQL** running and reachable
-- **A Google Cloud project** for deployment
+Tech stack
+- Node.js
+- Express 5
+- TypeScript
+- Prisma (PostgreSQL)
+- JWT for auth
+- Winston + Morgan for logging
 
-### Getting Started
-1. **Clone the repository and install dependencies**
-   ```bash
-   git clone <repository-url>
-   cd <repository-name>
-   npm install
-   ```
-2. **Set up environment variables**
-   Create a `.env` file in the project root. You can start by copying the example file if one is provided:
-   ```bash
-   cp .env.example .env
-   ```
-   Update the values in `.env` as needed (see the Environment section below).
-3. **Generate the Prisma client and ERD**
-   ```bash
-   npx prisma generate
-   ```
-4. **Apply database migrations**
-   ```bash
-   npx prisma migrate dev
-   ```
-   To reset and apply migrations from scratch, you can use:
-   ```bash
-   npx prisma migrate reset
-   ```
-5. **Run the application in development mode**
-   ```bash
-   npm run dev
-   ```
-   The application will be available at `http://localhost:<PORT>`.
-6. **Build and start for production**
-   ```bash
-   npm run build
-   npm start
-   ```
+Prerequisites
+- Node.js (18+ recommended)
+- npm
+- PostgreSQL (or a connection string to a hosted Postgres)
 
-### Scripts
-- `dev`: Runs the application using `ts-node-dev` for fast development with auto-reloading.
-- `build`: Compiles the TypeScript code to JavaScript in the `dist` directory.
-- `start`: Starts the production server from the compiled code in `dist/main.js`.
+Quick start
+1. Clone and install
 
-### Environment Variables
-The application requires the following environment variables to be set:
+```bash
+git clone <repo-url>
+cd <project-root>
+npm install
+```
 
-- `PORT`: The port for the HTTP server (e.g., `5000`).
-- `ENV`: The application environment (e.g., `Development`, `Production`).
-- `DATABASE_URL`: The connection string for your PostgreSQL database.
-  ```
-  postgresql://USER:PASSWORD@HOST:5432/DB_NAME?schema=public
-  ```
-- `JWT_SECRET`: A secret key for signing JWTs.
+2. Create a `.env` in the project root and set required variables (example below).
 
-Example `.env` file:
+3. Generate Prisma client and apply migrations
+
+```bash
+npx prisma generate
+npx prisma migrate dev
+```
+
+4. Start in development (auto-reloads)
+
+```bash
+npm run dev
+```
+
+Production build & run
+
+```bash
+npm run build
+npm start
+```
+
+Environment variables (example)
+Create a `.env` file and set the variables below (adjust values for your environment):
+
 ```env
-DATABASE_URL="postgresql://postgres:password@localhost:5432/e_cafe_db?schema=public"
+# PostgreSQL connection
+DATABASE_URL="postgresql://USER:PASSWORD@HOST:5432/DB_NAME?schema=public"
+
+# App
 PORT=5000
 ENV=Development
-JWT_SECRET="your-super-secret-jwt-key"
+
+# JWT
+JWT_SECRET=your_super_secret_jwt
 ```
 
-### API Routes
-The API base path is `/api/v1`.
+Notes from the codebase
+- The app mounts API routes under `/api/v1` (see `src/routes/index.routes.ts`).
+- Static uploads are served from the `uploads/` directory via the `/uploads` route.
+- The built frontend (Vite) is placed in the `client/` folder and served by Express when present.
+- Prisma generated client is copied into `dist/generated` during build (see `package.json` build script).
 
-#### Authentication
-- `POST /api/v1/users/register`: Register a new user.
-- `POST /api/v1/users/login`: Log in a user and receive a JWT.
+NPM scripts (from package.json)
+- `npm run dev` — development server (ts-node-dev, auto-reload)
+- `npm run build` — compile TypeScript (`tsc`) and copy generated Prisma client to `dist`
+- `npm start` — run compiled app with `module-alias`
 
-#### Resources
-Each resource exposes standard CRUD endpoints under the base path.
+API overview
+- Base path: `/api/v1`
+- Authentication endpoints (typical):
+  - `POST /api/v1/users/register` — register
+  - `POST /api/v1/users/login` — login (returns JWT)
 
-- **/shops**
-  - `GET /` — List all shops
-  - `GET /:id` — Get a single shop by ID
-  - `POST /` — Create a new shop
-  - `PUT /:id` — Update a shop
-  - `DELETE /:id` — Delete a shop
-- **/users**
-  - `GET /`, `GET /:id`, `POST /`, `PUT /:id`, `DELETE /:id`
-- **/types**
-  - `GET /`, `GET /:id`, `POST /`, `PUT /:id`, `DELETE /:id`
-- **/categories**
-  - `GET /`, `GET /:id`, `POST /`, `PUT /:id`, `DELETE /:id`
-- **/items**
-  - `GET /`, `GET /:id`, `POST /`, `PUT /:id`, `DELETE /:id`
-- **/order-lists**
-  - `GET /`, `GET /:id`, `POST /`, `PUT /:id`, `DELETE /:id`
-- **/list-items**
-  - `GET /`, `GET /:id`, `POST /`, `PUT /:id`, `DELETE /:id`
-- **/orders**
-  - `GET /`, `GET /:id`, `POST /`, `PUT /:id`, `DELETE /:id`
+- Resources (standard CRUD): `shops`, `users`, `types`, `categories`, `items`, `order-lists`, `list-items`, `orders`. Example: `GET /api/v1/shops`.
 
-Example using `curl`:
-```bash
-curl http://localhost:5000/api/v1/shops
+Prisma & database
+- Prisma schema: `prisma/schema.prisma`.
+- Generated client located at `src/generated/prisma` in source and copied to `dist/generated` during build.
+
+Logging
+- Winston used for application logging; Morgan integrates HTTP request logs.
+- Log files are stored under `logs/` (see project logger configuration).
+
+Serving frontend
+- If `client/` is present (Vite build output), the server serves static files and returns `client/index.html` for unknown routes to support the SPA.
+
+Docker / Cloud deployment (short)
+Use a Dockerfile to containerize the app. A minimal example:
+
+```Dockerfile
+FROM node:20-slim
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+CMD ["npm", "start"]
 ```
 
-### Data Model and Prisma
-- The Prisma schema is defined in `prisma/schema.prisma`.
-- The generated Prisma client is located in `src/generated/prisma`.
-- An Entity Relationship Diagram (ERD) is available at `prisma/ERD.png`.
+Deploy the container to your chosen provider (Cloud Run, ECS, GKE, etc.) and set environment variables in the platform.
 
-Common Prisma commands:
-```bash
-# After editing schema.prisma
-npx prisma generate
+Project structure (important parts)
 
-# Create a new migration
-npx prisma migrate dev --name <change_name>
-
-# Apply migrations to an existing database without prompts
-npx prisma migrate deploy
-```
-
-### Logging
-- Logs are output to the console and stored in files under the `logs/` directory:
-  - `logs/combined.log`: All logs.
-  - `logs/error.log`: Only error logs.
-- HTTP request logs from Morgan are routed into Winston at the `http` level.
-
-### Deployment with Google Cloud Run
-This application can be easily deployed as a container to Google Cloud Run.
-
-1.  **Enable Google Cloud APIs**: Make sure you have the Cloud Run and Cloud Build APIs enabled in your Google Cloud project.
-2.  **Containerize the application**: Create a `Dockerfile` in the root of your project:
-
-    ```Dockerfile
-    # Use the official Node.js 20 image.
-    FROM node:20-slim
-
-    # Create and change to the app directory.
-    WORKDIR /usr/src/app
-
-    # Copy application dependency manifests to the container image.
-    COPY package*.json ./
-
-    # Install production dependencies.
-    RUN npm install --only=production
-
-    # Copy local code to the container image.
-    COPY . .
-
-    # Build the TypeScript code.
-    RUN npm run build
-
-    # Run the web service on container startup.
-    CMD [ "npm", "start" ]
-    ```
-3. **Build and deploy**: Use Google Cloud Build to build the container and deploy it to Cloud Run.
-
-   ```bash
-   gcloud run deploy <service-name> --source . --region <your-region>
-   ```
-
-   Replace `<service-name>` with a name for your service (e.g., `my-api-service`) and `<your-region>` with your preferred Google Cloud region (e.g., `us-central1`). You will also be prompted to set environment variables during the deployment process.
-
-### Project Structure
 ```
 src/
-  config/
-    config.ts
-  controllers/
-    *.controller.ts
-  middlewares/
-    requestLogger.ts
-  routes/
-    *.routes.ts       # mounted under /api/v1
-  services/
-    *.service.ts
-  utils/
-    logger.ts
-    response.ts
-    handlePrimaErrors.ts
-  main.ts
-prisma/
-  schema.prisma
-  ERD.md
-  ERD.png
-  migrations/
+  config/            # app configuration and env validation
+  controllers/       # request handlers
+  services/          # business logic
+  routes/            # express route registration (mounted at /api/v1)
+  middlewares/       # request logging, error handling, validation
+  generated/prisma/  # prisma client (source)
+  main.ts            # server bootstrap
+prisma/              # schema + migrations + ERD
+client/              # optional front-end build (served statically)
+uploads/             # served static uploads
+logs/                # log files
 ```
-
-### License
-ISC
